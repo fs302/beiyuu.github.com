@@ -11,6 +11,8 @@ description: 写了3年的博客，积累了102篇博文。想想大学毕业后
 
 ![Cover](http://www.wytk2008.net/wordpress/wp-content/uploads/2014/06/IMG_0996-1024x768.jpg)
 
+---文章爬取
+
 整个过程包括文章爬取，内容提取和生成PDF，均通过Java完成。个人java还比较渣，写得不太好。
 
 	package crawler_wordpress;
@@ -144,4 +146,73 @@ description: 写了3年的博客，积累了102篇博文。想想大学毕业后
 	            }
 	        }
 	    }
+	}
+
+---PDF生成
+
+首先获取目录中HTML的文件名，对于每个HTML文件，用render进行渲染输出。注意此处应该添加中文字体支持。另外，原作者的library，并不能很好地支持中文换行，有人对此做了修改，网上可以下载到改好的包。
+
+	package oliver.itext.html2pdf;
+	
+	import java.io.File;
+	
+	import java.io.FileOutputStream;
+	
+	import java.io.IOException;
+	
+	import java.io.OutputStream;
+	import java.util.ArrayList;
+	import java.util.List;
+	
+	import com.lowagie.text.pdf.BaseFont;
+	import org.xhtmlrenderer.pdf.ITextFontResolver;
+	import org.xhtmlrenderer.pdf.ITextRenderer;
+	
+	import com.lowagie.text.DocumentException;
+	import org.xhtmlrenderer.pdf.TrueTypeUtil;
+	
+	public class FirstDoc
+	{
+	
+	    private static ITextRenderer render = new ITextRenderer();
+	    public static void main(String[] args) throws DocumentException, IOException
+	    {
+	        String path = System.getProperty("user.dir") + "/src/";
+	        List<String> fileName_list = getFileNames(path);
+	        for (String fileName : fileName_list) {
+	            System.out.println("Processing "+fileName);
+	
+	            String inputFile = path + "pages/" + fileName + ".html";
+	            String url = new File(inputFile).toURI().toURL().toString();
+	            String outputFile = path + "outputs/" + fileName + ".pdf";
+	            OutputStream os = new FileOutputStream(outputFile);
+	
+	            render.setDocument(url);
+	
+	            ITextFontResolver fontResolver = render.getFontResolver();
+	
+	            //添加字体：宋体、黑体
+	            fontResolver.addFont("C:/Windows/Fonts/simsun.TTC", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+	            fontResolver.addFont("C:/Windows/Fonts/simhei.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+	
+	            render.layout();
+	            render.createPDF(os);
+	            os.close();
+	        }
+	    }
+	
+	    //获取目录下所有文件名
+	    private static List<String> getFileNames(String path) throws IOException {
+	        List<String> names = new ArrayList<String>();
+	        File file = new File(path + "/pages");
+	        File[] lf = file.listFiles();
+	        for (int i = 0; i < lf.length; i++) {
+	            String filename = lf[i].getName();
+	            if (filename.endsWith("html")) {
+	                String name = filename.replace(".html", "");
+	                names.add(name);
+	            }
+	        }
+	        return names;
+	    }
 	}
