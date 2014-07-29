@@ -84,13 +84,13 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-position:50% 50%;
 }
 .tech .aside{
-    background-image:url('../images/tech.jpg');
+    background-image:url('http://findshine.qiniudn.com/tech.jpg');
 }
 .life .aside{
-    background-image:url('../images/life.jpeg');
+    background-image:url('http://findshine.qiniudn.com/life.jpeg');
 }
 .project .aside{
-    background-image:url('../images/project.jpeg')
+    background-image:url('http://findshine.qiniudn.com/project.jpeg')
 }
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
