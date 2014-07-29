@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Thinking in MapReduce
-category: life
-description: [![Map_reduce_overview](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)
+category: tech
+description: 不要以为你懂了WordCount了就学会了mapReduce]，更不用将如此General的框架想成只能做count操作的SB模型。
 ---
+
 [![Map_reduce_overview](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)
 
 
