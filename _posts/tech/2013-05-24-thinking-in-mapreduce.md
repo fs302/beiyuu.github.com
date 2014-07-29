@@ -4,6 +4,7 @@ title: Thinking in MapReduce
 category: life
 description: 不要以为你懂了WordCount了就学会了[MapReduce](http://en.wikipedia.org/wiki/Mapreduce)，更不用将如此General的框架想成只能做count操作的SB模型。做完<Introduction to Data Science>的Programming Assignment3，才发现以前对MapReduce的理解有两个误区: * MapReduce只能做“数值统计” *要做MapReduce，就必须自己写master，自己搭hadoop
 ---
+
 [![Map_reduce_overview](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)](http://www.wytk2008.net/wordpress/wp-content/uploads/2013/05/Map_reduce_overview.png)
 
 
