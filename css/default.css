@@ -84,10 +84,10 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-position:50% 50%;
 }
 .tech .aside{
-    background-image:url('../images/tech.jpeg');
+    background-image:url('../images/tech.jpg');
 }
 .life .aside{
-    background-image:url('../images/life.jpg');
+    background-image:url('../images/life.jpeg');
 }
 .project .aside{
     background-image:url('../images/project.jpeg')
