@@ -2,8 +2,9 @@
 layout: post
 title: 盘点2013年十件好玩的事
 category: life
-description: [1]参加了互联网科学中心·[复杂性系统冬令营](http://www.wytk2008.net/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/867/)，与Boem Jum Kim等教授深入[交流](http://www.wytk2008.net/life/894/)。
+description: ten intersting things
 ---
+
 [1]参加了互联网科学中心·[复杂性系统冬令营](http://www.wytk2008.net/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/867/)，与Boem Jum Kim等教授深入[交流](http://www.wytk2008.net/life/894/)。
 
 [2]在涛哥的指导下，和睿琪、翔宇一起完成了2013年全美数学建模/交叉建模竞赛，提出了带迁移机制的全球食物链网络，4天3夜的战斗印象深刻。（[ICM2013-Solution](http://www.findshine.com/doc/ICM2013.pdf)）
