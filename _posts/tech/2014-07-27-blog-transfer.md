@@ -3,9 +3,10 @@ layout:     post
 title:      用Flying Saucer+Jsoup生成个人博客文集
 category: tech 
 description: 写了3年的博客，积累了102篇博文。想想大学毕业后可以做一个小结，顺便作一些迁移博客的前期准备。
+published: false
 ---
 
-在这里写了3年的博客，积累了102篇博文。想想大学毕业后可以做一个小结，一方面把文章作个备份，另一方面想想工作以后可以作些什么改变，比如我正打算把博客迁移到Github或者阿里云的服务器上，加快访问速度和减少维护成本。
+在wytk2008.net写了3年的博客，积累了102篇博文。想想大学毕业后可以做一个小结，一方面把文章作个备份，另一方面想想工作以后可以作些什么改变，比如我正打算把博客迁移到Github或者阿里云的服务器上，加快访问速度和减少维护成本。
 
 原先打算用Latex生成漂亮的文章，但是没有发现合适的API可以用，如果要较完整地保留原博文的格式、图片等信息，自己写一个从HTML到Latex的转码甚是耗时。于是辗转发现一个叫[Flying Saucer](http://code.google.com/p/flying-saucer/)的Java库，可以很好地将带CSS的网页“打印”成PDF，于是花了两天的时间把博客的文章拉取下来制成了一个文集，预览地址：[Book](http://www.wytk2008.net/wordpress/wp-content/uploads/2014/06/Book.pdf)
 
