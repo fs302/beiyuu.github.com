@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualization in Tableau-Biweekly[13.06.10-13.06.23]
-category: tech
+category: project
 description: 给大家分享一个我今天用Tableau做的一个可视化报表。
 ---
 给大家分享一个我今天用Tableau做的一个可视化报表。
