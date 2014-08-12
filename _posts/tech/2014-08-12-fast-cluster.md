@@ -6,7 +6,9 @@ description: 2014年发表在《科学》杂志上的聚类文章，引发了不
 published: true
 ---
 工作以后发现自己学习和研究的时间变得少得可怜。
+
 前两周因为一个同事的交流，关注了一下[canopy](http://en.wikipedia.org/wiki/Canopy_clustering_algorithm)辅助Kmeans聚类确定簇数目。然后想起最近很火的一篇Science文章：[Clustering by fast search and find of density peak](http://wenku.baidu.com/link?url=5Wvn42-wj0z3UzyXeZNdLc3OpFnmGE7LsNU2Z3I1GWN3vSg8oy1Ub_QGSJISt7rVMlOSYgeodXQrU7ukUJGGgKm3yFzIgVYc8YupLdtlPh7),据说非常简单而优美。然后上网上搜了一下，评论的文章也就那样转来转去，其实就是把人家论文拿来翻译一下，有些关键点根本没讲清楚，真不知道翻译者是不是自己实现过那个算法。
+
 我之所以对这个算法感兴趣，主要是因为看到论文中可以识别那么奇形怪状的点簇，然后又只有两个指标，好像很有道理又很好算的样子。没想到被坑惨了，我用了差不多两个星期，偶尔下班后有时间看论文、写代码。
 ![Aggregation-Cut off Kernel][1]
 这个算法，其实是对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到高密度点的距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。
