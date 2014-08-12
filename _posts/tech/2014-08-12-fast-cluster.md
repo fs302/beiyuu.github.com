@@ -12,6 +12,7 @@ DATA:http://cs.joensuu.fi/sipu/datasets/
 
 CODE:
     import math
+
     def getDistance(pt1, pt2):
         tmp = pow(pt1[0]-pt2[0],2) + pow(pt1[1]-pt2[1],2)
         return pow(tmp,0.5)
