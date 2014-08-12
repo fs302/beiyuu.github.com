@@ -3,14 +3,31 @@ layout:     post
 title:      Science:Clustering by fast search and find of density peak
 category: tech 
 description: 2014年发表在《科学》杂志上的聚类文章，引发了不少人的关注。一方面是因为这些顶级期刊开始重视数据挖掘领域，另一方面原因是这个聚类算法的简洁高效。
-published: false
+published: true
 ---
+工作以后发现自己学习和研究的时间变得少得可怜。
+
+前两周因为一个同事的交流，关注了一下[canopy](http://en.wikipedia.org/wiki/Canopy_clustering_algorithm)辅助Kmeans聚类确定簇数目。然后想起最近很火的一篇Science文章：[Clustering by fast search and find of density peak](http://wenku.baidu.com/link?url=5Wvn42-wj0z3UzyXeZNdLc3OpFnmGE7LsNU2Z3I1GWN3vSg8oy1Ub_QGSJISt7rVMlOSYgeodXQrU7ukUJGGgKm3yFzIgVYc8YupLdtlPh7),据说非常简单而优美。然后上网上搜了一下，评论的文章也就那样转来转去，其实就是把人家论文拿来翻译一下，有些关键点根本没讲清楚，真不知道翻译者是不是自己实现过那个算法。
+
+我之所以对这个算法感兴趣，主要是因为看到论文中可以识别那么奇形怪状的点簇，然后又只有两个指标，好像很有道理又很好算的样子。没想到被坑惨了，我用了差不多两个星期，偶尔下班后有时间看论文、写代码。
 
 ![Aggregation-Cut off Kernel][1]
 
-DATA:http://cs.joensuu.fi/sipu/datasets/
+这个算法，其实是对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到高密度点的距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。
 
-CODE:
+![A sets-Cut off Kernel][2]
+
+聚类过程，[这篇文章](http://www.52ml.net/16296.html)讲的还不错，首先我们要把所有点的两个属性算出来，可以画出一个平面决策图。我想说的是两点，第一点关于聚类中心的选择，我翻看了几篇文章（包括作者原文），都没有明确指出一个很好地自动确定中心数目的方法，较多的做法是画出决策图后进行人工选定范围。我的做法是，按rho排序，然后根据决策图人工对delta取一个合适的值，大于这个delta值的，才能被选为中心。
+![Flame-Cut off Kernel][3]
+
+第二点是关于rho的计算，其实论文中只提到一个计算公式，是通过截断距离做线性判断，这个计算方法对一般的球状簇，如图[1]，图[2]，有不错的效果，而且计算快速，但是对图[3]的异形图，效果就不好了。这时候翻看作者给出的matlab源码，了解到还可以使用高斯核函数来定义局部密度，引入以后就完全handle了异形的问题，见图[4]，我觉得高斯核函数确实是强大。具体实现可以参看python代码。
+
+![Flame-Gaussian kernel][4]
+
+DATA来源:http://cs.joensuu.fi/sipu/datasets/
+
+[CODE=python]
+
     import math
 
     def getDistance(pt1, pt2):
