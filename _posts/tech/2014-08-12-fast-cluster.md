@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Science:Clustering by fast search and find of density peak
+title:      Science:简单快速的聚类方法
 category: tech 
-description: 2014年发表在《科学》杂志上的聚类文章，引发了不少人的关注。一方面是因为这些顶级期刊开始重视数据挖掘领域，另一方面原因是这个聚类算法的简洁高效。
+description: 2014年发表在《科学》杂志上的聚类文章，引发了不少人的关注。一方面是因为这些顶级期刊开始重视数据挖掘领域，另一方面原因是这个聚类算法的简洁高效。于是在工作之余，对这个算法进行了理解和实现。并不感觉它有多高大上，但是在两个关键问题上，还是有所得。
 published: true
 ---
 工作以后发现自己学习和研究的时间变得少得可怜。
