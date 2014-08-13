@@ -11,20 +11,20 @@ published: true
 
 我之所以对这个算法感兴趣，主要是因为看到论文中可以识别那么奇形怪状的点簇，然后又只有两个指标，好像很有道理又很好算的样子。没想到被坑惨了，我用了差不多两个星期，偶尔下班后有时间看论文、写代码，才把这个简单的算法实现下来。其中依然还有一个参数需要手工调整，就是delta的阈值（下面有讲）。
 
-<center>图1 聚合点簇Aggregation（共7个聚类，采用Cut off kernel）</center>
+<center>**图1** 聚合点簇Aggregation（共7个聚类，采用Cut off kernel）</center>
 ![Aggregation-Cut off Kernel][1]
 这个算法，其实是对所有坐标点，基于相互距离，提出了两个新的属性，一是局部密度rho，即与该点距离在一定范围内的点的总数，二是到高密度点的距离delta。作者提出，类簇的中心是这样的一类点：它们被很多点围绕（导致局部密度大），且与局部密度比自己大的点之间的距离也很远。
 
-<center>图2 A sets（20个聚类，算法分出19个，采用Cut off kernel）</center>
+<center>**图2** A sets（20个聚类，算法分出19个，采用Cut off kernel）</center>
 ![A sets-Cut off Kernel][2]
 聚类过程，[这篇文章](http://www.52ml.net/16296.html)讲的还不错，首先我们要把所有点的两个属性算出来，可以画出一个平面决策图；根据决策图，选出rho和delta都大的点作为聚类中心；选定中心后，让周围的点采取“跟随”策略，归类到密度比自己大的最近邻居所在的簇。
 我更想说的是两点，第一点关于聚类中心的选择，我翻看了几篇文章（包括作者原文），都没有明确指出一个很好地自动确定中心数目的方法，较多的做法是画出决策图后进行人工选定范围。我的做法是，按rho排序，然后根据决策图人工对delta取一个合适的值，大于这个delta值的，才能被选为中心。这种做法很人肉，让我一直有没完结的感觉，继续探索一下有没有自动确定这个阈值的方法。
 
-<center>图3 火焰形状（2个聚类，采用Cut off kernel）</center>
+<center>**图3** 火焰形状（2个聚类，采用Cut off kernel）</center>
 ![Flame-Cut off Kernel][3]
 第二点是关于rho的计算，其实论文中只提到一个计算公式，是通过截断距离做线性判断，即rho=sigma(sign(dij-dc)),这个计算方法对一般的球状簇，如图[1]，图[2]，有不错的效果，而且计算快速，但是对图[3]的异形图（类簇形状并不呈球状分布），效果就不好了。这时候翻看作者给出的matlab源码，了解到还可以使用高斯核(Gaussian Kernel)函数来定义局部密度，引入以后就完全handle了异形的问题，见图[4]，我觉得高斯核函数确实是强大（但是为什么呢？）。具体实现可以参看python代码（两种rho的计算都有）。
 
-<center>图4 火焰形状（2个聚类，采用Gaussian kernel）</center>
+<center>**图4** 火焰形状（2个聚类，采用Gaussian kernel）</center>
 ![Flame-Gaussian kernel][4]
 
 DATA来源:[http://cs.joensuu.fi/sipu/datasets/](http://cs.joensuu.fi/sipu/datasets/)
