@@ -32,7 +32,7 @@ published: true
 
 DATA来源:[http://cs.joensuu.fi/sipu/datasets/](http://cs.joensuu.fi/sipu/datasets/)
 
-[CODE=python]
+[CODE:flame_GaussianKernel.py]
 
     import math
 
