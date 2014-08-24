@@ -9,3 +9,4 @@ Fork from [BeiYuu.com](http://beiyuu.com)
 * Tech：技术分享，重点在机器学习、数据挖掘、Web开发和架构等
 * Life：生活感悟，希望每两周有一些观点和感悟整理成文，记录生活。
 * Project：一些成型的小项目
+* Shine: English Essay

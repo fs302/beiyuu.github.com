@@ -2,21 +2,23 @@
 layout: home
 ---
 
-<div class="index-content tech">
+<div class="index-content shine">
     <div class="section">
         <ul class="artical-cate">
-           <li class="on"><a href="/"><span>Tech</span></a></li>
+            <li><a href="/"><span>Tech</span></a></li>
             <li><a href="/life"><span>Life</span></a></li>
             <li><a href="/project"><span>Project</span></a></li>
-			<li><a href="/shine"><span>Shine</span></a></li>
+			<li class="on"><a href="/shine"><span>Shine</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="artical-list">
-        {% for post in site.categories.tech %}
+        {% for post in site.categories.shine %}
             <li>
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <h2>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
                 <div class="title-desc">{{ post.description }}</div>
             </li>
         {% endfor %}
