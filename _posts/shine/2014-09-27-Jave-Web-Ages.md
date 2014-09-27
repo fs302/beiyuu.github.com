@@ -20,11 +20,13 @@ From these findings, a best practice as well as a pattern emerged - use Java obj
 
 As the JSP specification evolved, tags were introduced to encapsulate re-usable Java objects. Tags provided a HTML-like facade for accessing the underlying code, allowing designer and IDEs to interact with dynamic elements to compose page layout. Examples of the tags provided by JSP are *<jsp:userBean ... />* and *<jsp:getProperty ... />*.
 
+![model-view-controller](http://findshine.qiniudn.com/servlet.gif "model-view-controller")
+
 ## Action-Based Frameworks
 Action-Based frameworks came onto the scene to **combine the concepts of servlets and JSPs**.
 The idea being to split the request processing for the page the user sees into processing logic and the presentation logic, letting each part do what it does the best. The implementation is known as the *model-view-controller* pattern.
 
->In this pattern, the servlet is the *controller*, providing a centralized point of control for all client page requests. It maps the request URL to a unit of work know as an *action*. The action's job was to perform specific functionality for a given URL by accessing the HTTP session, HTTP request and form parameter, calling business services, and then mapping the response into a *model*, whose form is a plain old java object. Finally, the action returned a result, which was mapped to a JSP to render as the *view*.
+In this pattern, the servlet is the *controller*, providing a centralized point of control for all client page requests. It maps the request URL to a unit of work know as an *action*. The action's job was to perform specific functionality for a given URL by accessing the HTTP session, HTTP request and form parameter, calling business services, and then mapping the response into a *model*, whose form is a plain old java object. Finally, the action returned a result, which was mapped to a JSP to render as the *view*.
 
 ## Component-Based Frameworks
 As web application become more complex, it was realized that a page was no longer the logical separation - web applications had multiple forms per page, links for content updates and many other custom widgets - all which needed processing logic to perform their tasks.
