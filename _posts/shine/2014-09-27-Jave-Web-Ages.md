@@ -5,6 +5,7 @@ category: shine
 description: Based on <Starting Struts2>, I would like to review the Java web development ages and make you get insights of how history goes in this field.
 published: true
 ---
+![www.taobao.com](http://findshine.qiniudn.com/taobao.JPG "Taobao.com")
 
 Today's Web Pages are quickly response, separated in modularity and functional as desktop software. If you visit large website as Taobao.com, over hundreds requests will be sent to render the current page, it is definitely a contribute of modularity and Ajax technology. Now let's take a brief view of how we got to today's Java web application options.
 
@@ -26,7 +27,7 @@ As the JSP specification evolved, tags were introduced to encapsulate re-usable 
 Action-Based frameworks came onto the scene to **combine the concepts of servlets and JSPs**.
 The idea being to split the request processing for the page the user sees into processing logic and the presentation logic, letting each part do what it does the best. The implementation is known as the *model-view-controller* pattern.
 
-In this pattern, the servlet is the *controller*, providing a centralized point of control for all client page requests. It maps the request URL to a unit of work know as an *action*. The action's job was to perform specific functionality for a given URL by accessing the HTTP session, HTTP request and form parameter, calling business services, and then mapping the response into a *model*, whose form is a plain old java object. Finally, the action returned a result, which was mapped to a JSP to render as the *view*.
+In this pattern, the servlet is the **controller**, providing a centralized point of control for all client page requests. It maps the request URL to a unit of work know as an *action*. The action's job was to perform specific functionality for a given URL by accessing the HTTP session, HTTP request and form parameter, calling business services, and then mapping the response into a **model**, whose form is a plain old java object. Finally, the action returned a result, which was mapped to a JSP to render as the **view**.
 
 ## Component-Based Frameworks
 As web application become more complex, it was realized that a page was no longer the logical separation - web applications had multiple forms per page, links for content updates and many other custom widgets - all which needed processing logic to perform their tasks.
