@@ -2,7 +2,7 @@
 layout: post
 title: How we got to today's Java web application options
 category: shine
-description: Based on <Starting Struts2>, I would like to review the Java web development ages and make you get insights of how history goes in this field.
+description: Based on *Starting Struts2*, I would like to review the Java web development ages and make you get insights of how history goes in this field.
 published: true
 ---
 ![www.taobao.com](http://findshine.qiniudn.com/taobao.JPG "Taobao.com")
