@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 25岁的青年该有什么样子？
+title: 25岁青年该有什么？
 category: life
 description:  激情与独立思考，第一性原理。
 published: true
