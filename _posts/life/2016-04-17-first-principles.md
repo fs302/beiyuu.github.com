@@ -51,3 +51,4 @@ published: true
 * [1] [厨子与大厨：伊隆·马斯克的独家配方（上）](http://mmbiz.qpic.cn/mmbiz/kk8UjiaPkHezVaiaBIYUwBXIUUB8NXb0xBVNkCUZkibqaWZHjzly4KQ7jLcS6ibnvibygagx6pGxqnvjb4H3RcMZQyw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
 * [2] [厨子与大厨：伊隆·马斯克的独家配方（下）]()
 
+*注：文中配图转载自微信公众号[董老师在硅谷]，来自上面引文*
