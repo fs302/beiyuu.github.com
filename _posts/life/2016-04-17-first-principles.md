@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 25岁该是什么样子？
+title: 25岁，该拥有什么？
 category: life
 description:  激情与独立思考，第一性原理。
 published: true
 
 ---
 
-周五做完年度绩效Review，老板提了一点直击要害——“有没有感觉你可能正在从优秀中走向平庸”。时间很残酷，如果你的视线中有一个世界舞台，那么你会看到上面的人物已经越来越接近你的年龄。于是我开始思考和搜寻，世界上那帮让我觉得牛逼的人，25岁处于一个什么样的状态，有什么样的世界观和思维方式，我们的差距在哪里？
+时间很残酷，如果你的视线中有一个世界舞台，那么你会看到上面的人物已经越来越接近你的年龄。于是我开始思考和搜寻，世界上那帮让我觉得牛逼的人，25岁处于一个什么样的状态，有什么样的世界观和思维方式，我们的差距在哪里？
 
 正好Email中收到Quora推送的一个问题：[How much should you have accomplished by 26 years of age?](https://www.quora.com/How-much-should-you-have-accomplished-by-26-years-of-age)（有多少事情是你在26岁时已经完成的？），是一份高收入的工作、一套自己的房子、一段认真的感情，还是小有名气？
 
@@ -48,7 +48,7 @@ published: true
 
 苏东坡25岁初任判官，无繁重公务，于是畅游木白山和黑水谷一带的寺院，以及周文王的故里，写下豪放诗句：“人生到处知何似，应似飞鸿踏雪泥。泥上偶然留趾爪，鸿飞哪复计东西。”
 
-* [1] [厨子与大厨：伊隆·马斯克的独家配方（上）](http://mmbiz.qpic.cn/mmbiz/kk8UjiaPkHezVaiaBIYUwBXIUUB8NXb0xBVNkCUZkibqaWZHjzly4KQ7jLcS6ibnvibygagx6pGxqnvjb4H3RcMZQyw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+* [1] [厨子与大厨：伊隆·马斯克的独家配方（上）](http://mp.weixin.qq.com/s?__biz=MzA3NTM4NDE2Mw==&mid=401975456&idx=1&sn=e147a20367c6dac224f102370e195db3)
 * [2] [厨子与大厨：伊隆·马斯克的独家配方（下）](https://mp.weixin.qq.com/s?__biz=MzA3NTM4NDE2Mw==&mid=401986343&idx=1&sn=77f67f30cb2019e7a6b23d473929fd19)
 * [3] [Elon Musk，一个活在未来的人，和他背后坎坷暗黑的过去](http://mp.weixin.qq.com/s?__biz=MzA3NTM4NDE2Mw==&mid=401915633&idx=1&sn=25845051d1fbf38a69eb73e6adbde9a7&scene=21#wechat_redirect)
 
