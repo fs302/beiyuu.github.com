@@ -1,6 +1,5 @@
 auto: true
 
-markdown: rdiscount
 paginate: 8
 permalink: /:year/:month/:day/:title.html
 
