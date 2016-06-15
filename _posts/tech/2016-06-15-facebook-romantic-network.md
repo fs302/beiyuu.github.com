@@ -3,7 +3,6 @@ layout: post
 title: 从Facebook社交网络中挖掘情侣关系
 category: tech 
 description: 网络科学杂谈系列：网络结构的巨大威力
-published: true
 
 ---
 
