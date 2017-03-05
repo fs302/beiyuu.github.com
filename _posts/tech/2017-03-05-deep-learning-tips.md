@@ -50,7 +50,7 @@ description: 本文介绍了深度学习的基本流程，优化方法，以及�
     - Process: Convolution & Max Pooling & Fully Connect
 * Recurrent Neural Network(RNN)
     - The output of hidden layer are stored in the memory
-    - Long Short-term Memory(LSTM) [4 inputs,1 outputs]
+    - Long Short-Term Memory(LSTM) [4 inputs,1 outputs]
         + Input Gate 
         + Signal control the input gate
         + Forget Gate
