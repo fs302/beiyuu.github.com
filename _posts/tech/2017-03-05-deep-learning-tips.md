@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 深度强化学习系列：深度神经网络
+title: 深度强化学习系列笔记：深度神经网络
 category: tech 
 description: 本文介绍了深度学习的基本流程，优化方法，以及两个极具代表性的深度神经网络CNN和RNN
 
