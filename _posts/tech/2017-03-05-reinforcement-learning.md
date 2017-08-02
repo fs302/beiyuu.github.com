@@ -81,7 +81,7 @@ description: 本文介绍了强化学习的理论框架和模型方法。
     - Temporal-Difference Learning
         + learns from incomplete episodes, by *bootstrapping* （局部采样）
         + updates value $V(S_t)$ towards *estimated* return $R_{t+1}+\gamma V(S_{t+1})$
-        + $V(S_t)=V(S_t)+\alpha(R_{t+1}+\gamma V(S_{t+1})-V(S_t)$
+        + $V(S_t)=V(S_t)+\alpha(R_{t+1}+\gamma V(S_{t+1})-V(S_t))$
         + low variance, some bias
         + more efficient
 
