@@ -17,7 +17,7 @@ $$
 f:  v_i \to z_i \in \mathbb{R}^d
 $$
 
-其中 $z_i$ 是一个输出的多维向量，并且满足$d \ll |V|$。用于评估这个学习效果的标准，就是看向量化后重新复原网络结构的能力。
+其中 $z_i$ 是一个输出的多维向量，并且满足 $d \ll |V|$。用于评估这个学习效果的标准，就是看向量化后重新复原网络结构的能力。
 
 在[1]中，作者提到节点向量化有3大挑战：
 
@@ -69,7 +69,7 @@ $$
 
 ##### GF
 
-根据[1]的调研，GF(Graph Factorization) 是第一个在 O(|E|) 的时间复杂度上完成向量化的算法。其损失函数定义为：
+根据[1]的调研，GF(Graph Factorization) 是第一个在 `O(|E|)` 的时间复杂度上完成向量化的算法。其损失函数定义为：
 
 $$
 L(Z,\lambda) =\frac{1}{2}\sum_{(i,j) \in E}(W_{ij} - <Z_i,Z_j>)^2+\frac{\lambda}{2}\sum_i{Z_i}^2
@@ -79,7 +79,7 @@ $$
 
 ##### HOPE
 
-HOPE(High-Order Proximity preserved Embedding) 模型相比 GF，通过引入 $||S-Z_sZ_t^T||_F^2$ 考虑了高阶相似性，论文作者尝试了 Kate Index, Root Page Rank, Common Neighbors, Adamic-Adar Score 等相似性指标，然后把相似性矩阵分解为 $S=M_g^{-1}M_l$，因为$M_g^{-1}$ 和 $M_l$ 都是稀疏的，所以利用 SVD 能有较高的运行效率。
+HOPE(High-Order Proximity preserved Embedding) 模型相比 GF，通过引入 $ ||S-Z_sZ_t^T||_F^2 $ 考虑了高阶相似性，论文作者尝试了 Kate Index, Root Page Rank, Common Neighbors, Adamic-Adar Score 等相似性指标，然后把相似性矩阵分解为 $ S=M_g^{-1}M_l $，因为$ M_g^{-1} $ 和 $ M_l $ 都是稀疏的，所以利用 SVD 能有较高的运行效率。
 
 #### 2.2 Random Walk based
 
@@ -87,7 +87,7 @@ HOPE(High-Order Proximity preserved Embedding) 模型相比 GF，通过引入 $|
 
 ##### DeepWalk&node2vec
 
-DeepWalk 是最早提出的基于 Word2vec 的节点向量化模型。其主要思路，就是利用构造节点在网络上的随机游走路径，来模仿文本生成的过程，提供一个节点序列，再套用 Word2Vec 对每个节点进行向量化表示。因为知道了节点 V 的前 k 个节点和后 k 个节点，就能很好地将网络邻居结构存入向量中。其目标就是最大化 $log Pr(v_{i-k},…,v_{i-1},v_{i+1},…,v_{i+k}|Z_i)$。
+DeepWalk 是最早提出的基于 Word2vec 的节点向量化模型。其主要思路，就是利用构造节点在网络上的随机游走路径，来模仿文本生成的过程，提供一个节点序列，再套用 Word2Vec 对每个节点进行向量化表示。因为知道了节点 V 的前 k 个节点和后 k 个节点，就能很好地将网络邻居结构存入向量中。其目标就是最大化 $ log Pr(v_{i-k},…,v_{i-1},v_{i+1},…,v_{i+k}|Z_i) $。
 
 ![image.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/6740d4ca734d3f1ebc1c95b560746ce3.png)
 
@@ -109,7 +109,7 @@ $$
 L=\sum_{v_i \in V}||DEC(z_i)-s_i||_2^2
 $$
 
-其中 $s_i$ 是一个$|V|$ 维的输入向量，而 $z_i$ 的维数必然远小于前者。其实它的建模思路和前面提到的矩阵分解是一致的，只是在降维时用的不是矩阵分解，而是 Auto-encoder。
+其中 $s_i$ 是一个 $ |V| $ 维的输入向量，而 $ z_i $ 的维数必然远小于前者。其实它的建模思路和前面提到的矩阵分解是一致的，只是在降维时用的不是矩阵分解，而是 Auto-encoder。
 
 ![image.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/1eec8b094561d9c517965b94bbf9e035.png)
 
