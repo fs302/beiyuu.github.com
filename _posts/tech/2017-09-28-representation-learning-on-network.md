@@ -12,9 +12,11 @@ description: 全民 Embedding, Everything to vector
 ## Embedding Nodes
 
 在这些方法中，受研究和应用关注最多的就是节点向量化（Node Embedding），即对于一个图 $G =(V,E)$，学习一种映射：
+
 $$
 f:  v_i \to z_i \in \mathbb{R}^d
 $$
+
 其中 $z_i$ 是一个输出的多维向量，并且满足$d \ll |V|$。用于评估这个学习效果的标准，就是看向量化后重新复原网络结构的能力。
 
 在[1]中，作者提到节点向量化有3大挑战：
@@ -58,17 +60,21 @@ $$
 ##### Laplacian Eigenmaps
 
 Laplacian Eigenmaps 的目标是将相似性高的两个节点，映射到低维空间后依然保持距离相近，其损失函数定义为：
+
 $$
 L(Z) =\frac{1}{2}(z_i-z_j)^2W_{ij}  \\=Z^TLZ
 $$
+
 其中 $L$ 是图 G 的 Laplacian 矩阵，$L= D-A$，其中 $D$ 是度矩阵，$A$ 是邻接矩阵。
 
 ##### GF
 
 根据[1]的调研，GF(Graph Factorization) 是第一个在 O(|E|) 的时间复杂度上完成向量化的算法。其损失函数定义为：
+
 $$
 L(Z,\lambda) =\frac{1}{2}\sum_{(i,j) \in E}(W_{ij} - <Z_i,Z_j>)^2+\frac{\lambda}{2}\sum_i{Z_i}^2
 $$
+
 其中 $\lambda$ 是正则化参数。跟上面的 Laplacian Eigenmaps 相比，GF 算法是将两个向量重构后的边权作为衡量方法，两个向量可能有多种重构方式，比如直接点乘，或者求余弦相似度等等。
 
 ##### HOPE
@@ -98,9 +104,11 @@ LINE(Large-scale Information Network Embeddings) 直观上看其实并没有用�
 ##### SDNE
 
 SDNE(Structural Deep Network Embeddings) 将节点的相似性向量 $s_i$ 直接作为模型的输入，通过 Auto-encoder 对这个向量进行降维压缩，得到其向量化后的结果 $z_i$。其损失函数定义为：
+
 $$
 L=\sum_{v_i \in V}||DEC(z_i)-s_i||_2^2
 $$
+
 其中 $s_i$ 是一个$|V|$ 维的输入向量，而 $z_i$ 的维数必然远小于前者。其实它的建模思路和前面提到的矩阵分解是一致的，只是在降维时用的不是矩阵分解，而是 Auto-encoder。
 
 ![image.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/1eec8b094561d9c517965b94bbf9e035.png)
